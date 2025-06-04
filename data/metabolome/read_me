@@ -10,6 +10,6 @@ rawMZdataMergeAndNormalization.R, which is R code to open and compile the LC-MS 
 
 removingTechnicalCovariates.R, which is R code used to adjust data to address the effects of sample shipping time and arrival temperature.  This file generates the R data file: 'technicalCovarsRemovedData'
 
-Running the code in awMZdataMergeAndNormalization.R and removingTechnicalCovariates.R sequentially will generate data that is ready for analysis the plasma metabolome in the DAP Precision cohort.  Those adjusted data are in the file 'technicalCovarsRemovedData'
+Running rawMZdataMergeAndNormalization.R and removingTechnicalCovariates.R sequentially will generate data that is ready for analysis the plasma metabolome in the DAP Precision cohort.  Those adjusted data are in the file 'technicalCovarsRemovedData'
 
 Users can of corse modify this code to perform different transformations or adjustments to the data.
