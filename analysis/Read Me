@@ -56,7 +56,6 @@ using data files:
 'DAP_2024_SamplesResults_Metadata_v1.0.csv' # from TERRA
 # as well as other internally generated files
 
-
 generates data files used elsewhere:
 'P1.metabolome.withBreedData.2'
 'PCANOVA_result'
@@ -71,10 +70,32 @@ using data files:
 'PCANOVA_result'  # this study
 'scaled.data_for_CBC_mixedModel'  # this study
 
-
 generates data files used elsewhere:
 none
 #######################################
 
+#######################################
+ptmAA vs AAs.R # comparison of ptmAAs and AAs, included designation of 'ambiguous' AA class
+
+using data files: 
+'CBC_CELLcovars_mixed_model_results' # this study
+'mmResiduals' # this study
+'blood.covariates.RData' # this study
+
+generates data files used elsewhere:
+'modAAs.csv'
+#######################################
 
 
+#######################################
+diet variables.R # investigate association between metabolites and primary diet components
+
+using data files: 
+'P1.technicalCovarsRemovedData' # this study
+'scaled.data_for_CBC_mixedModel' # this study
+'DAP_2024_CODEBOOK_v1.0.csv' # from TERRA
+'DAP_2024_HLES_dog_owner_v1.0.RData' # from TERRA
+
+generates data files used elsewhere:
+'diet_mixed_model_results'
+#######################################
