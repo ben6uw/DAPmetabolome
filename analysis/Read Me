@@ -4,8 +4,14 @@ ______________.
 #######################################
 removingTechnicalCovariates.R
 does: adjusts normalized LC-MS peak area data for hemolysis, sample travel time, arrival temperature and other preLC-MS effects  
-using data files: 'normalizedData' # this study
+
+using data files: 
+'normalizedData' # this study
+
+generates data files:
+'technicalCovarsRemovedData'
 #######################################
+
 
 #######################################
 CBCVariableSelection.R:  
@@ -40,10 +46,27 @@ generates data files:
 'mmResiduals'
 #######################################
 
+
 #######################################
-removingTechnicalCovariates.R:  
-does: adjusts normalized LC-MS peak area data for hemolysis, sample travel time, arrival temperature and other preLC-MS effects  
-using data files: 'normalizedData'
+signalment.R
+does: cohort summary statistics, PCA and ANCOVA
+
+using data files: 
+'technicalCovarsRemovedData' # this study
+'P1sampleinfo.csv' # this study
+'p1_update_March2024_with_Genetic_Breeds.RData' # this study
+'blood.covariates.RData' # this study
+'scaled.data_for_CBC_mixedModel' # this study
+'DAP_2024_DogOverview_v1.0.RData' # from TERRA
+'DAP_2024_SamplesResults_Metadata_v1.0.csv' # from TERRA
+# as well as other internally generated files
+
+
+generates data files:
+'P1.technicalCovarsRemovedData'
+'P1.technicalCovarsRemovedData_metaToo'
+'P1.metabolome.withBreedData'
+'P1.metabolome.withBreedData.2'
 #######################################
 
 
