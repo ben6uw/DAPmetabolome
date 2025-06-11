@@ -1,7 +1,50 @@
-These R files will perform the analysis of the dog plamsa metabolome in the DAP Precision Cohort and which is publiched in ______________.
-_____file name______:  does:  
-____file name______:  does:  
-____file name______:  does:  
-____file name______:  does:  
-____file name______:  does:  
+These R files will perform the analysis of the dog plamsa metabolome in the DAP Precision Cohort:
+______________.
+
+#######################################
+removingTechnicalCovariates.R
+does: adjusts normalized LC-MS peak area data for hemolysis, sample travel time, arrival temperature and other preLC-MS effects  
+using data files: 'normalizedData'
+#######################################
+
+#######################################
+removingTechnicalCovariates.R:  
+does: adjusts normalized LC-MS peak area data for hemolysis, sample travel time, arrival temperature and other preLC-MS effects  
+using data files: 'technicalCovarsRemovedData'
+#######################################
+
+
+#######################################
+age_mixed_model_CBCcovars.R
+does: adjusts normalized LC-MS peak area data for hemolysis, sample travel time, arrival temperature and other preLC-MS effects  
+using data files: 
+'blood.covariates.RData'
+'P1.metabolome.withBreedData.2'
+'grm_Mar_2024.RData'
+'Raftery_targeted_metabolites_information.csv'
+
+generates data files:
+'scaled.data_for_CBC_mixedModel'
+'CBC_CELLcovars_mixed_model_results'
+'TableS1.txt'
+'BLUPsubtracted'
+'BLUEsubtracted'
+'mmResiduals'
+#######################################
+
+#######################################
+removingTechnicalCovariates.R:  
+does: adjusts normalized LC-MS peak area data for hemolysis, sample travel time, arrival temperature and other preLC-MS effects  
+using data files: 'normalizedData'
+#######################################
+
+
+#######################################
+removingTechnicalCovariates.R:  
+does: adjusts normalized LC-MS peak area data for hemolysis, sample travel time, arrival temperature and other preLC-MS effects  
+using data files: 'normalizedData'
+#######################################
+
+
+
 ____file name______:  does:  
