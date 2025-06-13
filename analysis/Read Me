@@ -1,6 +1,11 @@
 These R files will perform the analysis of the dog plamsa metabolome in the DAP Precision Cohort:
 ______________.
 
+
+
+
+
+
 #######################################
 removingTechnicalCovariates.R # adjusts normalized LC-MS peak area data for hemolysis, sample travel time, arrival temperature and other preLC-MS effects  
 
@@ -100,3 +105,34 @@ generates data files used elsewhere:
 'diet_mixed_model_results'
 'kibblersOnlyMixedModelResults'
 #######################################
+
+#######################################
+urineVariableSelectionandAnalysis.R # investigate association between metabolites and urinalysis data
+
+using data files: 
+'scaled.data_for_CBC_mixedModel' # this study
+'DAP_2024_SamplesResults_Urine_v1.0.csv' # from TERRA
+
+generates data files used elsewhere:
+'UrineMixedModelData'
+'UrineMixedModelResults'
+#######################################
+
+
+#######################################
+mediation analysis.R # performs mediation analysis, using creatinine, BUN or uSG to test each for mediation of the age-association of ptmAAs
+
+using data files: 
+'scaled.data_for_CBC_mixedModel' # this study
+'modAAs.csv' # this study
+'UrineMixedModelData' # this study
+'UrineMixedModelResults' # this study
+
+generates data files used elsewhere:
+'diet_mixed_model_results'
+'kibblersOnlyMixedModelResults'
+#######################################
+
+
+
+
